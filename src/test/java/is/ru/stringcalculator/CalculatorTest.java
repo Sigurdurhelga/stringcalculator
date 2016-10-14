@@ -70,4 +70,14 @@ public class CalculatorTest {
     	assertEquals(0, Calculator.add("1001"));
     }
 
+    @Test
+    public void test testCustomDelimiter1Char(){
+    	assertEquals("6", Calculator.add("// \n3 3"));
+    }
+
+    @Test
+    public void test testCustomDelimiter1Char(){
+    	assertEquals("6", Calculator.add("//siggi\n3siggi3siggi3000"));
+    }
+
 }
