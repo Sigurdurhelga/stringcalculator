@@ -9,10 +9,16 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
+		if(text.startsWith("//")) {
+			int newlinepos = text.indexOf('\n');
+			String delim = text.substring(2, newlinepos);
+			text = text.substring(newlinepos+1);
+			text = text.replace(delim, ",");
+		}
 		else {
 			text = text.replace("\n", ",");
-			return sum(splitNumbers(text, ","));
 		}
+		return sum(splitNumbers(text, ","));
 	}
 
 	private static int toInt(String number){
