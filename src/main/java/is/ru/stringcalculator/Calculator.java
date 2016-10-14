@@ -33,7 +33,8 @@ public class Calculator {
         	if(currentNumer < 0) {
         		negativeNumbers.add(number);
         	}
-		    total += currentNumer;
+        	if(currentNumer < 1001)
+		    	total += currentNumer;
 		}
 		if(!negativeNumbers.isEmpty())
 			throw new IllegalArgumentException("Negatives not allowed: " + String.join(",", negativeNumbers));
