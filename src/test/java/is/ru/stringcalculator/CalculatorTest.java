@@ -71,13 +71,13 @@ public class CalculatorTest {
     }
 
     @Test
-    public void test testCustomDelimiter1Char(){
-    	assertEquals("6", Calculator.add("// \n3 3"));
+    public void testCustomDelimiter1Char(){
+    	assertEquals(6, Calculator.add("// \n3 3"));
     }
 
     @Test
-    public void test testCustomDelimiter1Char(){
-    	assertEquals("6", Calculator.add("//siggi\n3siggi3siggi3000"));
+    public void testCustomDelimiterString(){
+    	assertEquals(6, Calculator.add("//siggi\n3siggi3siggi3000"));
     }
 
 }
