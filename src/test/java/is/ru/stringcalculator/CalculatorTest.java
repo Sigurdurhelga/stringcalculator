@@ -60,4 +60,14 @@ public class CalculatorTest {
     	Calculator.add("-5\n3,-2");
     }
 
+    @Test
+    public void testNumbersAboveThousand(){
+    	assertEquals(1005, Calculator.add("1000\n5,1001"));
+    }
+
+     @Test
+    public void testSoloNumberAboveThousand(){
+    	assertEquals(0, Calculator.add("1001"));
+    }
+
 }
